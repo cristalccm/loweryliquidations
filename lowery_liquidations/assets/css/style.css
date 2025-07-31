@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  img{
+    max-width: inherit;
+  
+    
+  }
+
+body {
+  background-color: ;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+header.primary {
+  background-color: #8C2B45;
+  display:grid;
+  justify-content: space-between;
+  align-items: center;
+  padding: px;
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+  
+
+ 
+   
+  
+   
+  header.primary h1{
+    color:#f5f4f4 ;
+    text-align: left;
+    margin:0'
+}
+  
+
+  .topnav {
+    background-color:#8C2B45 ;
+    display: grid;
+    overflow: hidden;
+    grid-column-start: 6;
+    grid-column-end: 48;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    list-style-type: none;
+    clear: both;
+
+    
+  }
+  
+ 
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .topnav a:hover {
+    color: rgb(255, 253, 253);
+  }
+  
+  .topnav ul{
+    list-style-type: none;
+  
+  }
+  
+
+
+.container{
+  
+   grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 58;
+}
+
+.intro{
+  color:#8C2B45;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row: 8 / 12;
+
+}
+
+.headshot{
+      grid-column-start: 6;
+        grid-column-end: 10;
+          grid-row-start: 8;
+            width:400px;
+            height: auto;
+            
+}
+
+h2{
+  font-size: 35px;
+}
+
+  
+@media screen and (min-width:768px){
+  .row{
+     grid-template-columns:2,1fr;
+  }
+}
+
+@media screen and (min-width:992px){
+    .row{
+     grid-template-columns:repeat(4, 1fr);
+  }
+}
+  
+
+
+
+
+
+
+footer{
+  background-color:#BF7387;
+  color: #f2f2f2;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 59;
+  grid-row-end: 60;
+  text-align: center;
+
+}
+footer a{
+  color: #f2f2f2;
+  margin: 8px;
+}
+h6{
+  font-size: 15px;
+  color:#f2f2f2;
+  margin-left: 10px;
+ 
+}
