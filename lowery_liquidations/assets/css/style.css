@@ -8,7 +8,9 @@ img{
 }
 
 body {
-  background-color: #e1dcda;
+background-color: oldlace;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto 1fr auto;
@@ -18,11 +20,13 @@ body {
 }
 
 header.primary {
+  
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
+ 
  
 }
 
@@ -110,15 +114,44 @@ header.primary h1{
   outline: 2px solid #ffffff;
   outline-offset: 2px;
 }
+.intro {
 
-.intro{
-  grid-column: 1 / -1;      
+  max-width: 100%;      
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: auto;
+  text-align: center;
+  padding: 2rem;
+}
+.intro .content {
+  max-width: 800px;  
+  width: 100%;
 }
 
 
-h1{ font-size: 15px; }
+h1{ 
+  font-size: 15px; 
 
-h2{ font-size: 8px; }
+  white-space: nowrap;
+}
+
+h2{ font-size: 10px; }
+P{
+  font-size: 10px;
+}
+.browse{
+   max-width: 100%;      
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: auto;
+  text-align: center;
+  padding: 2rem;
+}
+.browse-button{
+  font-size: 8px;
+}
 
 @media (prefers-reduced-motion: reduce){
   .topnav a{ transition: none; }
