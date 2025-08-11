@@ -1,22 +1,16 @@
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 body {
   background-color: oldlace;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; 
   font-family: "georgia", sans-serif;
   font-weight: 400;
   font-style: normal;
   min-height: 100vh;
   margin: 0;
-
 }
 
 
@@ -24,9 +18,17 @@ header.primary {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   padding: 1rem 2rem;
 }
+
+.logo {
+  display: block;
+  width: clamp(170px, 12vw, 250px);
+  height: auto;
+}
+
+
 .topnav ul {
   display: flex;
   gap: 1rem;
@@ -34,6 +36,7 @@ header.primary {
   margin: 0;
   padding: 0;
 }
+
 .topnav a {
   text-decoration: none;
   color: #3d918d;
@@ -42,25 +45,29 @@ header.primary {
   padding: .6rem .75rem;
   border-radius: 6px;
 }
+
 .topnav a:hover {
   color: #82c7c3;
-  background: rgba(255,255,255,.12);
+  background: rgba(0,0,0,.06);
 }
+
+
 .topnav a.btn-contact {
   color: #ffffff;
   background: #51a5a5;
-  border-radius: 5;
+  border-radius: 5px; 
 }
+.topnav a.btn-contact:hover { background: #429494; }
 
-.topnav a.btn-contact:hover {
-  background: #429494;
-}
+
 .contact-fab { display: none; }
+
+
 main {
   grid-column: 1 / -1;
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
+  flex-direction: column;  
+  align-items: center;     
   padding: 2rem;
 }
 
@@ -68,18 +75,17 @@ main {
 .intro {
   max-width: 100vw;
   text-align: center;
-  margin-bottom: 2rem; 
-  margin-top:2rem;
-
+  margin: 2rem 0;
 }
-h1{
 
-font-size: 2rem;
-}
-p{
+
+.tag {
   font-size: 1.2rem;
-  font-
+  font-weight: 600;
 }
+
+h1 { font-size: 2rem; }
+
 .browse {
   max-width: 800px;
   text-align: center;
@@ -97,34 +103,72 @@ p{
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+.browse-button:hover { background-color: #429494; }
 
-.browse-button:hover {
-  background-color: #429494;
-}
-
-
-footer {
+/* ===== Footer ===== */
+footer{
   grid-column: 1 / -1;
-  background-color: rgba(81, 165, 165, 0.9);
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem 0;
-}
-footer a {
-  color: #f2f2f2;
-  margin: 8px;
+  grid-row: 3;
+  background-color: rgba(81,165,165,.9);
+  color:#fff;
+  position: relative;                 /* positioning context for dev-tag */
+  padding: 1rem 0 2.5rem;             /* extra bottom so dev-tag doesn't overlap */
 }
 
+footer a{ color:#f2f2f2; text-decoration: none; }
+footer a:hover{ opacity: .9; }
 
-.logo {
-  display: block;
-  width: clamp(170px, 12vw, 250px);
-  height: auto;
+
+footer .footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;                    
+  display: flex;
+  flex-direction: column;             
+  align-items: center;               
+  text-align: center;                
+  gap: .5rem;
+  position: static;                  
 }
 
 
+footer .footer-inner > p:first-of-type{ margin: 0; }
 
 
+.footer-social{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social a{
+  display: inline-flex;
+  width: 32px;                       
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social i{
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+footer .dev-tag{
+  position: absolute;
+  right: 0;                            
+  bottom: 8px;
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: .85;
+  text-align: right;
+}
+footer .dev-tag a{
+  color:#fff;
+  text-decoration: none;
+}
 
 @media (max-width: 720px) {
   .topnav ul {
@@ -135,7 +179,9 @@ footer a {
     font-size: .9rem;
     padding: .5rem .6rem;
   }
-    .topnav a.btn-contact { display: none; } 
+
+
+  .topnav a.btn-contact { display: none; }
 
   .contact-fab {
     position: fixed;
@@ -146,7 +192,7 @@ footer a {
     text-align: center;
     padding: 0.9rem 1.25rem;
     border-radius: 9999px;
-    background: #58adad;       
+    background: #58adad;
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
@@ -157,6 +203,6 @@ footer a {
   .contact-fab:hover { background: #429494; }
   .contact-fab:active { transform: translateY(1px); }
 
-
+ 
   body { padding-bottom: 88px; }
 }
